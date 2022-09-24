@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>INICIAR SESIÓN</title>
+      {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estiloLogin.css' %}">
+  </head>
+  <body>
+  <header><div id="arriba"></div></header>
+
+  <div id="general">
+  <div id="inicioSesion">
+      <h1 class="app">DOCTYTECH</h1>
+      <h3 class="textBienvenidos">Bienvenido/a</h3>
+      <h4 class="textInicia">Por favor inicie sesión</h4><br>
+
+    <form method="post" id="formInicioSesion">
+        <label ><b>Correo</b></label>
+        <input type="text"  name="uname" required>
+        <label ><b>Contraseña</b></label>
+        <input type="password" name="psw" required>
+        <button id="inicioSesionButton" type="submit"><span>INICIAR SESION</span></button>
+        <a href="">¿Haz olvidado la contraseña?</a>
+    </form>
+   </div>
+   </div>
+  </body>
+</html>
