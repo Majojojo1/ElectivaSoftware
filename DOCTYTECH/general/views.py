@@ -1,4 +1,5 @@
 from email import message
+import email
 from pyexpat.errors import messages
 from django.shortcuts import render, redirect
 
@@ -12,9 +13,22 @@ def login(request):
 def principal(request):
     return render(request, 'html/inicio.html')
 
+def agregandoSuperUser(request):
+    return render(request, 'html/registrarSuperUser.html')
 
 def regisSuperUser(request):
-    return render(request, 'html/registrarSuperUser.html')
+    if request.method == 'POST':
+        email = request.POST['correoUser']
+        name = request.POST['nombreUser']
+        password = request.POST['contraUser']
+        psw_repeat = request.POST['psw-repeat']
+        
+        nuevoSuperUser = superUser.objects.create_user( correoUser = email, nombreUser = name, contraUser = password)
+        nuevoSuperUser.save()
+        id = nuevoSuperUser.id
+        print('USUARIO CREADO')
+        
+        return render(request, 'html/registrarSuperUser.html')
 
 
 def agregarUsuario(request):
@@ -26,5 +40,3 @@ def personal(request):
 def agregandoUsuario(request):
     return render(request, 'html/agregarNuevoUser.html')
 
-def agregandoSuperUser(request):
-    return render(request, 'html/registrarSuperUser.html')
