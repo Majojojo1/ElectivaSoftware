@@ -79,11 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'DOCTYTECH_DB',
         'USER': 'postgres',
-<<<<<<< HEAD
-        'PASSWORD': 'root',
-=======
         'PASSWORD': 'nalita201',
->>>>>>> a1dd9c57b315d01b39e682a21460013aca7ddd77
         'HOST': '127.0.0.1',
         'DATABASE_PORT': '5432',
 

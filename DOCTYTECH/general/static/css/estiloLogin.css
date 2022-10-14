@@ -1,0 +1,88 @@
+/*SECCIÓN DE INICIO*/
+#general {
+    display: flex;
+    height: 690px;
+    padding: 15px;
+}
+
+#inicioSesion {
+    width: 30%;
+    height: 400px;
+    padding: 85px;
+    margin-left: 420px;
+    margin-top: 50px;
+}
+
+#inicioSesion h1 {
+    font-size: 50px;
+    margin-left: 95px;
+}
+
+#inicioSesion h3 {
+    font-size: 18px;
+    margin-left: 175px;
+    margin-top: 30px;
+    color: #2C2B2A;
+}
+
+#inicioSesion h4 {
+    font-size: 15px;
+    margin-left: 155px;
+    margin-top: 15px;
+    color: #585451;
+    
+}
+
+/*ESTILO DEL INPUT, LABEL Y BOTON*/
+
+#inicioSesion label{
+    font-size: 15px;
+    margin-bottom: 0.2rem;
+    color: #585451;
+    font-family: 'Orienta', sans-serif;
+    margin-left: 195px;
+    
+}
+
+#inicioSesion input{
+    width: 50%;
+    height: 1000%;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: #fff;
+    border-color: #fff;
+    font-family: 'Orienta', sans-serif;
+    padding: 9px;
+    margin-left: 105px;
+}
+
+#inicioSesionButton {
+    width: 150px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border: 2px solid;
+    border-radius: 5px;
+    background:#000;
+    border-color: #000;
+    cursor: pointer;
+    margin-left: 157px;
+    font-family: 'Orienta', sans-serif;
+    color: #fff;
+
+}
+
+/*ESTILO DE ¿OLVIDASTE TU CONTRASEÑA*/
+
+#inicioSesion a {
+    font-size: 18px;
+    margin-left: 105px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
