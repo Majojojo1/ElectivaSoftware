@@ -27,4 +27,5 @@ def agregandoUsuario(request):
     return render(request, 'html/agregarNuevoUser.html')
 
 def agregandoSuperUser(request):
+    
     return render(request, 'html/registrarSuperUser.html')

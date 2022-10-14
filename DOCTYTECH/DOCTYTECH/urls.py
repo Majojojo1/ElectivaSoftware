@@ -12,7 +12,7 @@ urlpatterns = [
     path('Personal/', views.personal, name='ver_personal'),
     path('seCreoUsuario/', views.agregandoUsuario, name='agregandoUsuario'),
     path('seCreoAdministrador/', views.agregandoSuperUser, name='agregandoSuperUser'),
-    
+    #Hola bobis xd 
 
 
     #ENVIO DE CORREO 

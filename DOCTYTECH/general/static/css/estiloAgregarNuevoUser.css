@@ -1,0 +1,7 @@
+#formRegistrarNuevoUsuario {
+}
+
+.SepararColumnas {
+  display: flex;
+  flex-wrap: nowrap;
+}

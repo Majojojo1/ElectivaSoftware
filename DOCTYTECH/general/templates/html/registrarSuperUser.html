@@ -4,64 +4,54 @@
     <meta charset="utf-8">
     <title>AGREGAR ADMINISTRADOR</title>
       {% load static %}
-   <!--<link rel="stylesheet" type="text/css" href="{% static 'css/estiloheader.css' %}">--> 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/estiloInicio.css' %}">
-            <link rel="stylesheet" href="{% static 'css/register.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloCuerpo.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloAdminPage.css' %}">
   </head>
   <body>
     <header><div id="izquierda"><h1 class="app">DOCTYTECH ADMIN</h1></div>
-
+        <div id="derecha">
+           <ul>
+             <li><a id="cse" href="{% url 'login' %}">Cerrar sesión</a></li>
+           </ul>
+        </div>
     </header>
 
   <div id="general">
-      <div id="general">
-          <div class="containerall">
-<div class="partadmin">
-    <div class="bandejas d-flex">
         <div class="menu">
+          
           <form action="{% url 'principal' %}">{% csrf_token %}
-            <button class="verEstudiantes btn-text" type="submit" >Ver Estudiantes</button>
+            <button class="boton1" type="submit" >Ver Estudiantes</button>
           </form>
           <form action="{% url 'ver_personal' %}">{% csrf_token %}
-            <button class="verPersonal btn-text" type="submit" >Ver Personal</button>
+            <button class="boton" type="submit" >Ver Personal</button>
           </form>
           <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
-            <button class="agregarUsuario btn-text" type="submit" >Agregar nuevo usuario</button>
+            <button class="boton" type="submit" >Agregar nuevo usuario</button>
           </form>
           <form action="{% url 'registro' %}">{% csrf_token %}
-            <button class="agregarSuper btn-text" type="submit" >Agregar Administrador</button>
+            <button class="aqui" type="submit" >Agregar Administrador</button>
           </form>
         </div>
-    </div>
-    <div class="crear d-flex">
-      <form action="{% url 'login' %}">{% csrf_token %}
-        <button class="btn">Cerrar sesión</button>
+
+      <div id="container">
+        <form action="{% url 'agregandoSuperUser' %}" method="post">{% csrf_token %}
+          <h1>REGISTRAR NUEVO ADMINISTRADOR</h1>
+  
+          <label for="Usuario"><b>Nombre Completo</b></label>
+          <input type="text" placeholder="Nombre" name="uname" id="nombre" required>
+  
+          <label for="email"><b>Correo</b></label>
+          <input type="text" placeholder="Email" name="email" id="email" required>
+  
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Contraseña" name="psw" id="psw" required>
+  
+          <label for="psw-repeat" class="ci"><b>Repite tu contraseña</b></label>
+          <input type="password" placeholder="Repite la contaseña" name="psw-repeat" id="psw-repeat" required>
+  
+          <button id="registrButton" type="submit" class="registerbtn">AÑADIR</button>
       </form>
-    </div>
-</div>
-
-  <div id="agregarSuperUser">
-    <form action="{% url 'agregandoSuperUser' %}" method="post">{% csrf_token %}
-      <div class="container">
-        <h1>REGISTRAR NUEVO ADMINISTRADOR</h1>
-
-        <label for="Usuario"><b>Nombre Completo</b></label>
-        <input type="text" placeholder="Nombre" name="uname" id="nombre" required>
-
-        <label for="email"><b>Correo</b></label>
-        <input type="text" placeholder="Email" name="email" id="email" required>
-
-        <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="contraseña" name="psw" id="psw" required>
-
-        <label for="psw-repeat"><b>Repite tu contraseña</b></label>
-        <input type="password" placeholder="" name="psw-repeat" id="psw-repeat" required>
-        
-        <button id="registrButton" type="submit" class="registerbtn btn" >AÑADIR</button>
       </div>
-    </form>  
-   </div>
-   </div>
-      </div>
+  </div>
   </body>
 </html>

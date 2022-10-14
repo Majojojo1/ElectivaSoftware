@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: boder-box;
+}
+
+body {
+    font-family: 'Orienta', sans-serif;
+    background: #F3B777;
+}
+
+header {
+    padding: 25px;
+    background: #F3B777;
+    color: #000;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+#derecha {
+    float: right;
+    font-size: 20px;
+    margin: -35px 50px;
+}
+
+#derecha a {
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+}
+
+#derecha ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+#derecha ul li {
+   display: inline-block;
+}
+
+#derecha ul li a {
+   display: block;
+   padding: 0.5rem 1 rem;
+   width: 200px;
+}
+
+#cse:hover {
+    background: #D39B60;
+}
+
+#izquierda h1 {
+    margin-right: 500px;
+}
