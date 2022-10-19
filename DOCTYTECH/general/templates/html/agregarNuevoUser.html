@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AGREGAR NUEVO USUARIO</title>
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloCuerpo.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloAdminPage.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloAgregarNuevoUser.css' %}">
+  </head>
+  <body>
+    <header><div id="izquierda"><h1 class="app">DOCTYTECH ADMIN</h1></div>
+        <div id="derecha">
+           <ul>
+             <li><a id="cse" href="{% url 'login' %}">Cerrar sesión</a></li>
+           </ul>
+        </div>
+    </header>
+
+  <div id="general">
+        <div class="menu">
+          
+          <form action="{% url 'principal' %}">{% csrf_token %}
+            <button class="boton1" type="submit" >Ver Estudiantes</button>
+          </form>
+          <form action="{% url 'ver_personal' %}">{% csrf_token %}
+            <button class="boton" type="submit" >Ver Personal</button>
+          </form>
+          <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
+            <button class="aqui active" type="submit" >Agregar nuevo usuario</button>
+          </form>
+          <form action="{% url 'registro' %}">{% csrf_token %}
+            <button class="boton" type="submit" >Agregar Administrador</button>
+          </form>
+        </div>
+
+      <div id="container">
+        <h1>REGISTRAR NUEVO USUARIO</h1>
+        <form action="{% url 'agregandoUsuario' %}" method="post" id="formRegistrarNuevoUsuario">
+          {% csrf_token %}
+          <label for="nombre"><b>Nombre Completo</b></label>
+          <input type="text" name="nombre" id="nombre" required>
+  
+          <label for="nombre"><b>Codigo</b></label>
+          <input type="text" name="codigo" id="nombre" required>
+  
+          <label for="nombre" class="ci"> <br> <b>Correo institucional</b></label>
+          <input type="email" name="email" id="nombre" required>
+          <!--INICIO SEPARACION POR COLUMNAS-->
+          <div class="SepararColumnas">
+            <select id="dropdown" name="facultad" style="margin-right: 20px">
+              <option value="" disabled selected hidden>SELECCIONE FACULTAD</option>
+              <option value="faad">FACULTAD DE ARQUITECTURA, ARTE Y DISEÑO</option>
+              <option value="fce">FACULTAD DE CIENCIAS ECONÓMICAS</option>
+              <option value="fdcp">FACULTAD DE DERECHO Y CIENCIAS POLÍTICAS</option>
+              <option value="fchs">FACULTAD DE CIENCIAS HUMANAS Y SOCIALES</option>
+              <option value="fi">FACULTAD DE INGENIERÍA</option>
+              <option value="ed">ESCUELA DE DEPORTE</option>
+            </select>
+    
+            <select id="dropdown" name="facultad" >
+              <option value="" disabled selected hidden>SELECCIONE SEGUNDA FACULTAD</option>
+              <option value="faad">FACULTAD DE ARQUITECTURA, ARTE Y DISEÑO</option>
+              <option value="fce">FACULTAD DE CIENCIAS ECONÓMICAS</option>
+              <option value="fdcp">FACULTAD DE DERECHO Y CIENCIAS POLÍTICAS</option>
+              <option value="fchs">FACULTAD DE CIENCIAS HUMANAS Y SOCIALES</option>
+              <option value="fi">FACULTAD DE INGENIERÍA</option>
+              <option value="ed">ESCUELA DE DEPORTE</option>
+            </select>
+          </div>
+          <!--FIN SEPARACION POR COLUMNAS-->
+  
+          <!--PROGRAMAS DE ARQUITECTURA, ARTE Y DISEÑO-->
+          {% if faad %}
+          <select id="dropdown" name="facultad">
+            <option value="" disabled selected hidden>SELECCIONE PROGRAMA</option>
+            <option value="arq">Arquitectura</option>
+            <option value="dv">Diseño de Vestuario</option>
+            <option value="ccg">Ciencias Culinarias de la Gastronomía</option>
+          </select>
+          {% endif %}
+  
+  
+          <!--PROGRAMAS DE CIENCIAS ECONÓMICAS-->
+          {% if fce %}
+          <select id="dropdown" name="facultad">
+            <option value="" disabled selected hidden>SELECCIONE PROGRAMA</option>
+            <option value="an">Administración de Negocios</option>
+            <option value="cp">Contaduría Pública</option>
+            <option value="e">Economía</option>
+            <option value="mni">Mercadeo y Negocios Internacionales</option>
+            <option value="fni">Finanzas y Negocios Internacionales</option>
+          </select>
+          {% endif %}
+  
+          <!--PROGRAMAS DE DERECHO Y CIENCIAS POLÍTICAS-->
+          {% if fdcp %}
+          <select id="dropdown" name="facultad">
+            <option value="" disabled selected hidden>SELECCIONE PROGRAMA</option>
+            <option value="d">Derecho</option>
+            <option value="gri">Gobierno y Relaciones Internacionales</option>
+          </select>
+          {% endif %}
+  
+          <!--PROGRAMAS DE CIENCIAS HUMANAS Y SOCIALES-->
+          {% if fchs %}
+          <select id="dropdown" name="facultad">
+            <option value="" disabled selected hidden>SELECCIONE PROGRAMA</option>
+            <option value="lei">Licenciatura en Educación Infantil</option>
+            <option value="lllc">Licenciatura en Literatura y Lengua Castellana</option>
+            <option value="lef">Licenciatura en Educación Física</option>
+            <option value="p">Psicología</option>
+          </select>
+          {% endif %}
+  
+          <!--PROGRAMAS DE INGENIERÍA-->
+          {% if fi %}
+          <select id="dropdown" name="facultad">
+            <option value="" disabled selected hidden>SELECCIONE PROGRAMA</option>
+            <option value="im">Ingeniería Multimedia</option>
+            <option value="ii">Ingeniería Industrial</option>
+            <option value="ia">Ingeniería Agroindustrial</option>
+            <option value="is">Ingeniería de Sistemas</option>
+            <option value="ib">Ingeniería Biomédica</option>
+            <option value="ie">Ingeniería Electrónica</option>
+          </select>
+          {% endif %}
+  
+          <select id="dropdown" name="rol">
+            <option value="" disabled selected hidden>SELECCIONE ROL</option>
+            <option value="im">Coordinador de trabajo de grado</option>
+            <option value="ii">Coordinador de práctica</option>
+            <option value="ia">Jurado</option>
+            <option value="is">Advisor</option>
+            <option value="ib">Director de trabajo de grado</option>
+            <option value="ie">Asesor de trabajo de grado</option>
+            <option value="ia">Profesor</option>
+            <option value="is">Estudiante</option>
+          </select>
+  
+          <button id="registrButton" type="submit" class="registerbtn">AÑADIR</button>
+      </form>
+      </div>
+  </div>
+  </body>
+</html>

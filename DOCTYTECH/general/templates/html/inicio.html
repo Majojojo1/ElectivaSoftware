@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOCTYTECH</title>
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloCuerpo.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/estiloAdminPage.css' %}">
+  </head>
+  <body>
+    <header><div id="izquierda"><h1 class="app">DOCTYTECH ADMIN</h1></div>
+        <div id="derecha">
+           <ul>
+             <li><a id="cse" href="{% url 'login' %}">Cerrar sesión</a></li>
+           </ul>
+        </div>
+    </header>
+
+  <div id="general">
+        <div class="menu">
+          
+          <form action="{% url 'principal' %}">{% csrf_token %}
+            <button class="aqui active" type="submit" >Ver Estudiantes</button>
+          </form>
+          <form action="{% url 'ver_personal' %}">{% csrf_token %}
+            <button class="boton" type="submit" >Ver Personal</button>
+          </form>
+          <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
+            <button class="boton" type="submit" >Agregar nuevo usuario</button>
+          </form>
+          <form action="{% url 'registro' %}">{% csrf_token %}
+            <button class="boton" type="submit" >Agregar Administrador</button>
+          </form>
+        </div>
+
+      <div id="container">
+        <h1>NO HAY ESTUDIANTES REGITRADOS</h1>
+      </div>
+  </div>
+  </body>
+</html>
