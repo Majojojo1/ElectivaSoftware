@@ -27,7 +27,7 @@
             <button class="boton" type="submit" >Ver Personal</button>
           </form>
           <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
-            <button class="aqui active" type="submit" >Agregar nuevo usuario</button>
+            <button class="aqui" type="submit" >Agregar nuevo usuario</button>
           </form>
           <form action="{% url 'registro' %}">{% csrf_token %}
             <button class="boton" type="submit" >Agregar Administrador</button>
@@ -44,11 +44,11 @@
           <label for="nombre"><b>Codigo</b></label>
           <input type="text" name="codigo" id="nombre" required>
   
-          <label for="nombre" class="ci"> <br> <b>Correo institucional</b></label>
+          <label for="nombre" class="ci"><b>Correo institucional</b></label>
           <input type="email" name="email" id="nombre" required>
           <!--INICIO SEPARACION POR COLUMNAS-->
           <div class="SepararColumnas">
-            <select id="dropdown" name="facultad" style="margin-right: 20px">
+            <select id="dropdown" name="facultad">
               <option value="" disabled selected hidden>SELECCIONE FACULTAD</option>
               <option value="faad">FACULTAD DE ARQUITECTURA, ARTE Y DISEÑO</option>
               <option value="fce">FACULTAD DE CIENCIAS ECONÓMICAS</option>
@@ -58,7 +58,7 @@
               <option value="ed">ESCUELA DE DEPORTE</option>
             </select>
     
-            <select id="dropdown" name="facultad" >
+            <select id="dropdown" name="facultad">
               <option value="" disabled selected hidden>SELECCIONE SEGUNDA FACULTAD</option>
               <option value="faad">FACULTAD DE ARQUITECTURA, ARTE Y DISEÑO</option>
               <option value="fce">FACULTAD DE CIENCIAS ECONÓMICAS</option>
