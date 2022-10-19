@@ -5,12 +5,15 @@
 
 # FALTA
 
-1. Css para las vistas de super usuario.
-2. **Guardar** la información del formulario en la base de datos.
-3. **Verificar** la información.
-4. HTML **Estudante**.
-4. HTML del **Personal**.
+1. **MERJORAR VISTA SUPER USER**
+2. HTML **Estudante**.
+3. HTML del **Personal**.
 4. HTML de **Enviar documento**.
+5. **SOLUCIONAR ERRORES**
+
+# NOVEDADES 
+1. La información ya se guarda y se verifica en la base de datos
+2. Errores  
 
 # NOTA 
 No olviden que antes de poder correr el codigo deben crear en su postgresql la base de datos con el nombre **DOCTYTECH_DB**, 
@@ -22,7 +25,7 @@ Una vez hecho eso en la terminal van a correr los siguientes comandos en el sigu
 2. python manage.py migrate
 3. python manage.py runserve
 
-**ALGUNA DUDA O INQUIETUD SOBRE EL CODIGO POR FAVOR PREGUNTAR POR EL GRUPO DE WHATSAPPA**
+**ALGUNA DUDA O INQUIETUD SOBRE EL CODIGO POR FAVOR PREGUNTAR POR EL GRUPO DE WHATSAPP**
 
 
 

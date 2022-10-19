@@ -20,10 +20,10 @@
         <div class="menu">
           
           <form action="{% url 'principal' %}">{% csrf_token %}
-            <button class="boton1" type="submit" >Ver Estudiantes</button>
+            <button class="boton" type="submit" >Ver Estudiantes</button>
           </form>
           <form action="{% url 'ver_personal' %}">{% csrf_token %}
-            <button class="aqui" type="submit" >Ver Personal</button>
+            <button class="aqui active" type="submit" >Ver Personal</button>
           </form>
           <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
             <button class="boton" type="submit" >Agregar nuevo usuario</button>

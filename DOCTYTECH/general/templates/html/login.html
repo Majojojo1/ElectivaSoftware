@@ -18,7 +18,7 @@
 
     <form action="{% url 'principal' %}" method="post" id="formInicioSesion">{% csrf_token %}
         <label><b>Correo</b></label>
-        <input type="text"  name="uname">
+        <input type="email"  name="email">
         <label><b>Contraseña</b></label>
         <input type="password" name="psw">
         <button id="inicioSesionButton" type="submit"><span>INICIAR SESION</span></button>

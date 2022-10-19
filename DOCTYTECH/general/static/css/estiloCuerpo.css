@@ -21,6 +21,8 @@ header {
     right: 0;
 }
 
+
+
 #derecha {
     float: right;
     font-size: 20px;
@@ -45,7 +47,7 @@ header {
 
 #derecha ul li a {
    display: block;
-   padding: 0.5rem 1 rem;
+   padding: 0.5rem 1rem;
    width: 200px;
 }
 

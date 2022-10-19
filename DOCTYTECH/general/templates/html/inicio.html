@@ -17,25 +17,24 @@
     </header>
 
   <div id="general">
-        <div class="menu">
-          
-          <form action="{% url 'principal' %}">{% csrf_token %}
-            <button class="aqui" type="submit" >Ver Estudiantes</button>
-          </form>
-          <form action="{% url 'ver_personal' %}">{% csrf_token %}
-            <button class="boton" type="submit" >Ver Personal</button>
-          </form>
-          <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
-            <button class="boton" type="submit" >Agregar nuevo usuario</button>
-          </form>
-          <form action="{% url 'registro' %}">{% csrf_token %}
-            <button class="boton" type="submit" >Agregar Administrador</button>
-          </form>
-        </div>
+    <div class="menu">
+      <form action="{% url 'principal'%}">{% csrf_token %}
+        <button class="aqui active" type="submit" >Ver Estudiantes</button>
+      </form>
+      <form action="{% url 'ver_personal' %}">{% csrf_token %}
+        <button class="boton" type="submit" >Ver Personal</button>
+      </form>
+      <form action="{% url 'agregar_usuario' %}">{% csrf_token %}
+        <button class="boton" type="submit" >Agregar nuevo usuario</button>
+      </form>
+      <form action="{% url 'registro' %}">{% csrf_token %}
+        <button class="boton" type="submit" >Agregar Administrador</button>
+      </form>
+    </div>
 
-      <div id="container">
-        <h1>NO HAY ESTUDIANTES REGITRADOS</h1>
-      </div>
+    <div id="container">
+      <h1>NO HAY ESTUDIANTES REGITRADOS</h1>
+    </div>
   </div>
   </body>
 </html>
